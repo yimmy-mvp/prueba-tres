@@ -1,42 +1,94 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F8FA;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #00BFA5;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
 }
 
 .step {
     margin: 20px;
+    width: 100%;
+    max-width: 600px;
 }
 
 #map {
-    height: 400px; /* Altura del mapa */
+    height: 400px;
     width: 100%;
     border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .hidden {
     display: none;
 }
 
+/* Buttons */
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #00BFA5;
     color: white;
     border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #008E75;
 }
 
-#qrCode {
-    margin-top: 20px;
+button:active {
+    transform: scale(0.98);
 }
 
+/* Input Fields */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #00BFA5;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #FFA726;
+}
+
+/* Animations and Transitions */
 .fade-in {
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -55,26 +107,49 @@ button:hover {
     transform: translateY(0);
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border-radius: 25px;
-    padding: 15px;
+/* Schedule List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background-color: #0056b3;
+li:hover {
+    background-color: #F0F0F0;
 }
 
-button:active {
-    transform: scale(0.98);
+/* Confirmation Message */
+#confirmationMessage {
+    font-size: 1.25rem;
+    color: #00BFA5;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* QR Code */
+#qrCode {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Progress Bar */
 .progress-bar {
     background-color: #F0F0F0;
     border-radius: 50px;
     padding: 5px;
+    margin: 20px 0;
 }
 
 .progress-bar-fill {
@@ -85,3 +160,17 @@ button:active {
     transition: width 0.5s ease;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
