@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas Fitness en San Salvador</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Urban Fitness Club</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Reservas Fitness en San Salvador</h1>
+        <h1>Bienvenido a Urban Fitness Club</h1>
+        <h2>Elige tu experiencia fitness</h2>
     </header>
 
-    <div id="step1" class="step">
+    <!-- Step 1: Iniciar sesión -->
+    <div class="step" id="step1">
         <h2>Paso 1: Inicia sesión</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Usuario" required />
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+        <input type="text" id="username" placeholder="Ingresa tu usuario">
+        <button onclick="login()">Iniciar Sesión</button>
     </div>
 
-    <div id="step2" class="step hidden">
+    <!-- Step 2: Seleccionar un negocio -->
+    <div class="step hidden" id="step2">
         <h2>Paso 2: Selecciona un negocio</h2>
         <div id="map"></div>
     </div>
 
-    <div id="step3" class="step hidden">
+    <!-- Step 3: Seleccionar un horario -->
+    <div class="step hidden" id="step3">
         <h2>Paso 3: Selecciona un horario</h2>
         <ul id="scheduleList"></ul>
     </div>
 
-    <div id="step4" class="step hidden">
-        <h2>Confirmación de Reserva</h2>
-        <p id="confirmationMessage"></p>
+    <!-- Confirmation -->
+    <div class="step hidden" id="step4">
+        <h2>Confirmación</h2>
+        <div id="confirmationMessage"></div>
         <canvas id="qrCode"></canvas>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
